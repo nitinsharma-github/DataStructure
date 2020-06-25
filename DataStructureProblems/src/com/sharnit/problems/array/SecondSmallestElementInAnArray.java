@@ -39,10 +39,10 @@ public class SecondSmallestElementInAnArray {
 	public static void main(String[] args) {
 		
 		int[] arr = {21,12,35,4,25,6,7,18,9,};
-		int smallestElement = findSeconSmallest(arr);
+		int secondSmallestElement = findSeconSmallest(arr);
 		
 		
-		System.out.println("smallest element : "+smallestElement);
+		System.out.println("second smallest element : "+secondSmallestElement);
 		
 	}
 }
