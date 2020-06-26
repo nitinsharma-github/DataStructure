@@ -68,17 +68,19 @@ public class RemoveDuplicateElementsFromAnArray {
                 if(my_array[i] == my_array[j])
                 {
                     //Replace duplicate element with last unique element
-                    System.out.println(""); 
-                	//System.out.println("my_array[j] : "+ j +" : "+my_array[j]);
-                	//System.out.println("my_array[no_unique_elements-1] : "+no_unique_elements+" : "+my_array[no_unique_elements-1]);
+                    System.out.println("");
+                    System.out.println("");
+                	System.out.println("my_array["+j+"] : "+my_array[j]);
+                	System.out.println("my_array["+(no_unique_elements-1)+"] : "+my_array[no_unique_elements-1]);
                     my_array[j] = my_array[no_unique_elements-1];
                     
                     for (int m = 0; m < my_array.length; m++)
                     {
                         System.out.print(my_array[m]+"\t");
                     }
-                     
-                    no_unique_elements--;
+                    System.out.println("");
+                    System.out.println("");
+                    no_unique_elements--; // important step
                      
                     j--;
                 }
