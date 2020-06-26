@@ -8,14 +8,16 @@ public class SumOfTwoElementsEqualToGivenInteger {
 		
 		for(int i=0; i<al.size() ; i++) {
 			
-			for(int j=i+1 ; j<al.size(); j++) {
+			for(int j=i+1 ; j<(al.size()-1); j++) {
 				
+				for(int k=j+1 ; k<(al.size()-2); k++) {
 				int m = ((Integer)(al.get(i))).intValue();
 				int n = ((Integer)(al.get(j))).intValue();
+				int o = ((Integer)(al.get(k))).intValue();
+				if((m+n+o) == a) {
 				
-				if((m+n) == a) {
-				
-					System.out.println(" numbers are " + m +","+n +" at index "+i+ " and "+j);
+					System.out.println(" numbers are " + m +","+n +","+o+" at index "+i+ " , "+j+ " and "+k);
+				}
 				}
 			}
 			
@@ -37,7 +39,7 @@ public class SumOfTwoElementsEqualToGivenInteger {
 		al.add(31);
 		al.add(71);
 		
-		int a = 92;
+		int a = 17;
 		
 		findTwoNumbers(al, a);
 		
