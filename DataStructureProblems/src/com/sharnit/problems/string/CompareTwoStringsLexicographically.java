@@ -18,7 +18,7 @@ public class CompareTwoStringsLexicographically {
 
 	public static void main(String[] str) {
 
-		String s1 = "I love my India /\";
+		String s1 = "I love my India ";
 		String s2 = "I love my Country";
 
 		compareString(s1, s2);
