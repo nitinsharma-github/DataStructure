@@ -2,7 +2,11 @@ package com.sharnit.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 import org.junit.Test;
 
@@ -87,11 +91,98 @@ public class JavaDeclarationAndDefinations {
 	}
 	
 	
-	private static double parseStringToDouble(String value, double defaultValue) {
-	    return value == null || value.isEmpty() ? defaultValue : Double.parseDouble(value);
+	private static String nullOrEmpty(String value) {
+	    return value == null || value.isEmpty() ? "invalid" : "valid";
 	}
 	// also, external libraries like Guava and numberutils can be used
 	
 	
+	
+	//MAP
+	{
+	String word = "mystring";
+	int i = 0;
+	Map<Character, Integer> charMap = new HashMap<Character, Integer>();
+	char[] characters = word.toCharArray();
+	if(charMap.containsKey(characters[i])) {
+		charMap.put(characters[i], charMap.get(characters[i])+1);
+	}else{
+		charMap.put(characters[i], 1);
+	};
+	
+	Set<Map.Entry<Character, Integer>> entrySet = charMap.entrySet();
+	for (Map.Entry<Character, Integer> entry : entrySet) 
+	{ 
+		if (entry.getValue() > 1) 
+		       { 
+			       System.out.printf("%s : %d %n", entry.getKey(), entry.getValue()); 
+			    } 
+	}
+	
+	
+	// Set
+	
+	{
+		Set<String> store = new HashSet<String>(); 
+			
+			if (store.add("element") == false) { 
+				System.out.println("found a duplicate element in array : " + "element"); 
+				} 
+	}
+	
+	
+	}
+	
+	
+	//String:
+	{
+		
+		//String str1 = "example.com", str2 = "Example.com";
+	    //StringBuffer strbuf = new StringBuffer(str1);
+		//str1.contentEquals(strbuf)
+		//**************************************************
+		
+		
+		{
+			// Character array with data.
+	        char[] arr_num = new char[] { '1', '2', '3', '4' };
+	        String str = String.copyValueOf(arr_num, 1, 3);
+	        
+	        
+	        char[] myStr1 = {'H', 'e', 'l', 'l', 'o'};
+	        String myStr2 = "";
+	        myStr2 = myStr2.copyValueOf(myStr1, 0, 5);
+	        System.out.println("Returned String: " + myStr2);
+	        
+	        //string to char array
+			char[] chars = str.toCharArray();
+			System.out.println(chars.length);
+			
+			//char at specific index
+			char c = str.charAt(2);
+			System.out.println(c);
+			
+			//Copy string characters to char array
+			char[] chars1 = new char[7];
+			str.getChars(0, 7, chars1, 0);
+			System.out.println(chars1);
+			
+			// Get the hash code for the above string.
+	        int hash_code = str.hashCode();
+			
+		}
+		
+		{
+			// boolean ends1 = str1.endsWith(end_str);
+			// boolean equals1 = columnist1.equalsIgnoreCase(columnist2);
+			
+		}
+		
+		
+		
+	
+		
+		
+	}
 	
 }
