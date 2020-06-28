@@ -175,7 +175,17 @@ public class JavaDeclarationAndDefinations {
 		{
 			// boolean ends1 = str1.endsWith(end_str);
 			// boolean equals1 = columnist1.equalsIgnoreCase(columnist2);
-			
+			// int a = str.indexOf("a", 0); // starts from index 0
+			// int a = str.lastIndexOf("a", str.length() - 1);
+			// int len = str.length();
+			// String new_str = str.replace('d', 'f');
+			// String new_str = str.replaceAll("Fox", "Cat");
+			// boolean starts1 = str1.startsWith(startStr);
+			// String new_str = str.substring(10, 26);
+			// String lowerStr = str.toLowerCase();
+			// String upper_str = str.toUpperCase();
+			// String new_str = str.trim();
+			// 
 		}
 		
 		
