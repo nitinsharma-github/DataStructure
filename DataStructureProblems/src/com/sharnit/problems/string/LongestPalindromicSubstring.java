@@ -25,7 +25,6 @@ public class LongestPalindromicSubstring {
 							maxLength = s.length();
 							longestPalindrom = s;
 							//System.out.println(" one of longest palindrom " + longestPalindrom);
-
 							break;
 						}
 					}
