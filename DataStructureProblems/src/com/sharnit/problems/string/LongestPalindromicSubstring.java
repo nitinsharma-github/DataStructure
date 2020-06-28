@@ -10,11 +10,11 @@ public class LongestPalindromicSubstring {
 		String longestPalindrom = "";
 
 		if (isPalindrom(str)) {
-			longestPalindrom = str;
+			longestPalindrom = str;			
 		} else {
 			for (int i = 0; i < str.length() - 1; i++) {
 
-				for (int j = i + 1; j < str.length() - 1; j++) {
+				for (int j = str.length() - 1; i < j; j--) {
 
 					String s = str.substring(i, j);
 
@@ -24,16 +24,17 @@ public class LongestPalindromicSubstring {
 						if (s.length() > maxLength) {
 							maxLength = s.length();
 							longestPalindrom = s;
-							System.out.println(" one of longest palindrom " + longestPalindrom);
+							//System.out.println(" one of longest palindrom " + longestPalindrom);
 
+							break;
 						}
 					}
-
+					
 				}
 
 			}
 		}
-		//System.out.println("Longest Palindrom " + longestPalindrom);
+		System.out.println("Longest Palindrom " + longestPalindrom);
 
 	}
 
