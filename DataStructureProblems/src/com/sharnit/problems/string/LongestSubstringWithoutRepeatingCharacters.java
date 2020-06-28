@@ -38,19 +38,15 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
 					b = true;
 					break;
-
 				}
-
 				if(b)
 				  break;
 			}
-
 		}
-
 		return b;
-
 	}
 
+	
 	public static void main(String[] args) {
 
 		String str = "afhroiqjgvrejvvkgkbgjsdfgjagkvflanldnakgjfkmbajadjbmadbmnfafkrjgfangfngbfdma";
