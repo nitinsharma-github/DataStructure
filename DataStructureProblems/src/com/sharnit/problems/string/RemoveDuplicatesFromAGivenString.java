@@ -8,7 +8,7 @@ public class RemoveDuplicatesFromAGivenString {
 		StringBuffer sb = new StringBuffer(charArray[0]);
 		
 		
-		// first method
+		// *************************************************************   first method
 		for(int i = 0; i<charArray.length ; i++) {
 			boolean b = false;
 			for(int j = i+1; j<charArray.length ; j++) {
@@ -27,7 +27,8 @@ public class RemoveDuplicatesFromAGivenString {
 		System.out.println(".............."+sb.toString());
 		
 		
-		// second method (better one)
+		// *************************************************************   second method (better one)
+		
 		String targetString = "";
 		
 		for(int i=0; i<charArray.length-1; i++) {
