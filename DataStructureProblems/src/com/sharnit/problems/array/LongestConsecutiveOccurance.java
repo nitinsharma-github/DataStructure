@@ -6,35 +6,38 @@ import java.util.Arrays;
 public class LongestConsecutiveOccurance {
 
 	public static int printLongestConsecutiveOccurance(int[] arr) {
-		int maxRun = 1;
-		int currentRun = 1;
-		int asc = 0;
-		for(int i = 0; i < arr.length-1; i++) {
-			
-			// descending run
-			if(arr[i] - arr[i+1] == -1 && (asc <= 0)) {
-				asc = -1;
-				currentRun++;
-			}
-			// ascending run
-			else if(arr[i] - arr[i+1] == 1 && (currentRun == 0 || asc >= 0)) {
-				asc = 1;
-				currentRun++;
-			}
-			else {
-				// run is over
-				if(currentRun > maxRun) {
-					maxRun = currentRun;
-				}
-				currentRun = 1;
-				asc = 0;
-				
-			}
+		int counter=1;
+		int highest=1;
+		boolean asc=false;
+	
+		
+		if(arr[0] < arr[1]){
+			asc=true;
+		} 
+		
+		//ascending
+		for(int i=0;i<arr.length-1;i++){
+					
+			        if(asc && arr[i] + 1 == arr[i+1]){
+						counter++;
+						if(counter > highest){highest=counter;}
+					}else{
+						counter=1;
+					}
 		}
-		if(currentRun > maxRun) {
-			maxRun = currentRun;
+		
+		//decending
+		for(int i=0;i<arr.length-1;i++){
+					if(!asc && arr[i] - 1 == arr[i+1]){
+						counter++;
+						if(counter > highest){highest=counter;}
+					}else{
+						counter=1;
+					}
 		}
-		return maxRun;
+		
+		
+		return highest;
 	}
 
 	public static void main(String[] args) {
