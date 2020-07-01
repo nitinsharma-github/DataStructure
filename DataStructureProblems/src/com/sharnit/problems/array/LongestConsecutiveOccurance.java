@@ -20,7 +20,9 @@ public class LongestConsecutiveOccurance {
 					
 			        if(asc && arr[i] + 1 == arr[i+1]){
 						counter++;
-						if(counter > highest){highest=counter;}
+						if(counter > highest){
+							highest=counter;
+							}
 					}else{
 						counter=1;
 					}
