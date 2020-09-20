@@ -22,6 +22,7 @@ public class LongestPallendrome {
 				if (b) {
 					if (subInner.length() > sub.length())
 						sub = subInner;
+					break;
 				}
 			}
 		}
