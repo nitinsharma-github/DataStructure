@@ -1,5 +1,6 @@
 package com.sharnit.problems.array;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,9 +11,12 @@ public static void duplicateElement(int[] arr) {
 	
 	//for (String name : names) { Integer count = nameAndCount.get(name); if (count == null) { nameAndCount.put(name, 1); } else { nameAndCount.put(name, ++count); } } // Print duplicate elements from array in Java Set<Entry<String, Integer>> entrySet = nameAndCount.entrySet(); for (Entry<String, Integer> entry : entrySet) { if (entry.getValue() > 1) { System.out.printf("duplicate element '%s' and count '%d' :", entry.getKey(), entry.getValue()); } }
 
+	
+	// 1st
 
 	Set set = new HashSet();
 	
+
 	for(int i=0; i<arr.length ; i++) {
 		
 		//if(!set.contains(arr[i]+""))
@@ -20,6 +24,23 @@ public static void duplicateElement(int[] arr) {
 			System.out.println("dup element : "+ arr[i]);
 	}
 	
+	
+	// 2nd
+	
+	Set set2 = new HashSet();
+	Set set3 = new HashSet();
+	
+	for(int i=0; i<arr.length ; i++) {
+		
+		if(set2.contains(arr[i])) {
+			set3.add(arr[i]);
+		}else{
+			set2.add(arr[i]);
+		}
+		
+	}
+	
+	System.out.println("dup elements : "+ Arrays.toString(set3.toArray()));
 	 
 	 /*
 	String dups = "";
