@@ -2,7 +2,46 @@ package com.sharnit.problems.array;
 
 public class EqualityOfTwoArray {
 
-	public static void compareArrays(int[] arr1, int[] arr2) {
+	
+     public static void compareArrays(int[] arr1, int[] arr2) {
+		
+		int arrLen1 = arr1.length;
+		int arrLen2 = arr2.length;
+		boolean b = true;
+		
+		if(arrLen1 != arrLen2) {
+			
+			System.out.println("Arrays length are not equal");
+			
+		}else {
+			
+			
+			
+			for(int i=0, j=arrLen1-1 ; i<arrLen1 && j>i ; i++, j--) {
+				
+			if (arr1[i] != arr2[i] && arr1[j] != arr2[j]) {
+				
+				b = false;
+				
+			}
+				
+			}
+			
+			if(b) {
+				System.out.println("Arrays are equal");
+			}else {
+				System.out.println("Arrays are not equal");
+			}
+			
+		}
+		
+		
+		
+		
+	}
+
+
+	public static void compareArrays2(int[] arr1, int[] arr2) {
 		
 		int arrLen1 = arr1.length;
 		int arrLen2 = arr2.length;
@@ -44,7 +83,7 @@ public class EqualityOfTwoArray {
 		int[] arr2 = {1,2,3,4,5,6,7,8,9};
 		
 		int[] arr3 = {1,2,3,4,5,6,7,8,9};
-		int[] arr4 = {1,2,3,4,5,6,7,8,0};
+		int[] arr4 = {1,2,3,4,5,6,6,8,0};
 		
 		int[] arr5 = {1,2,3,4,5,6,7,8,9};
 		int[] arr6 = {1,2,3,4,5,6,7,8,9,0};
