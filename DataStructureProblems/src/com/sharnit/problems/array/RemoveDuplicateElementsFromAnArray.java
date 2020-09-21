@@ -111,6 +111,7 @@ public class RemoveDuplicateElementsFromAnArray {
     {        
         unique_array(new int[] {0, 3, -2, 4, 3, 2,5,2,6,4,6,4});
          
+        //duplicateElement(new int[] {0, 3, -2, 4, 3, 2,5,2,6,4,6,4});
         //unique_array(new int[] {10, 22, 10, 20, 11, 22});
          
       }    

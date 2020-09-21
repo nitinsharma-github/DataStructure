@@ -7,7 +7,7 @@ public class ReturnIntegerArrayFromAlphaNumericArray {
 
 	public static void main(String[] args) {
 
-		String[] arr = { "1", "2", "a", "6", "7", "b", "8", "9" };
+		String[] arr = { "1", "2", "2","a", "6", "7", "b", "8", "9" };
 		String[] arr1 = findIntArray(arr);
 
 		System.out.println("..... " + Arrays.toString(arr1));
@@ -26,6 +26,7 @@ public class ReturnIntegerArrayFromAlphaNumericArray {
 
 			}
 		}
+		 System.out.println(Arrays.toString(out.toArray()));
 		return out.toArray(new String[out.size()]);
 	}
 

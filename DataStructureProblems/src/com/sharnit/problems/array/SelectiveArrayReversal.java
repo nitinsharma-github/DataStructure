@@ -8,10 +8,9 @@ public class SelectiveArrayReversal {
 		 if (arr == null || n < 2) {
       return arr;
     }
-    for (int i = 0; i < arr.length; i += n) {
       
       // take n elements from input array and make new onw	
-      int[] part = Arrays.copyOfRange(arr, i, Math.min(i + n, arr.length));
+      int[] part = Arrays.copyOfRange(arr, 0, 3);
       
       
       // reverse short array
@@ -19,8 +18,7 @@ public class SelectiveArrayReversal {
       
       
       // replace elements in input array
-      System.arraycopy(part, 0, arr, i, part.length);
-    }
+      System.arraycopy(part, 0, arr, 0, part.length);
     
     return arr;
   }
